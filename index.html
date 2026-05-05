@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surveying Data Entry Framework | Ramadan Sayed</title>
+</head>
+<body>
+
+    <!-- رأس الصفحة: يوضح هويتك المهنية -->
+    <header>
+        <h1>Engineering Survey Data Hub</h1>
+        <p>A specialized framework for managing geospatial coordinates and site data.</p>
+    </header>
+
+    <hr>
+
+    <!-- القسم الأول: نموذج إدخال البيانات المساحية -->
+    <section>
+        <h2>1. Site Point Entry Form</h2>
+        <form>
+            <!-- إدخال اسم النقطة -->
+            <label for="point-id">Point ID:</label><br>
+            <input type="text" id="point-id" name="point-id" placeholder="e.g. CP-01" required><br><br>
+
+            <!-- إدخال الإحداثيات (X, Y, Z) -->
+            <fieldset>
+                <legend>Coordinates (WGS84 / UTM)</legend>
+                
+                <label for="coord-x">Easting (X):&nbsp;&nbsp;</label>
+                <input type="number" id="coord-x" step="0.001" required><br>
+                
+                <label for="coord-y">Northing (Y):</label>
+                <input type="number" id="coord-y" step="0.001" required><br>
+                
+                <label for="coord-z">Elevation (Z):</label>
+                <input type="number" id="coord-z" step="0.001" required><br>
+            </fieldset>
+
+            <br>
+            <!-- اختيار نوع الجهاز المستخدم -->
+            <label for="instrument">Measurement Instrument:</label>
+            <select id="instrument">
+                <option value="total-station">Total Station</option>
+                <option value="gps-rtk">GPS RTK</option>
+                <option value="level">Digital Level</option>
+            </select>
+
+            <br><br>
+            <button type="submit">Save Point Data</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <!-- القسم الثاني: جدول عرض البيانات -->
+    <section>
+        <h2>2. Field Survey Report</h2>
+        <table border="5" width="50%">
+            <thead>
+                <tr>
+                    <th>Point ID</th>
+                    <th>Easting (X)</th>
+                    <th>Northing (Y)</th>
+                    <th>Elevation (Z)</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody  align="center">
+                <tr>
+                    <td>BM-101</td>
+                    <td>654231.450</td>
+                    <td>2745120.300</td>
+                    <td>610.250</td>
+                    <td>Fixed Control</td>
+                </tr>
+                <tr>
+                    <td>ST-01</td>
+                    <td>654245.120</td>
+                    <td>2745135.850</td>
+                    <td>609.110</td>
+                    <td>Measured</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+
+    <!-- التذييل: يربط المشروع بمسارك التدريبي -->
+    <footer>
+        <p>Developed by: <strong>Ramadan Sayed</strong></p>
+        <p>Project Goal: Bridging Surveying Engineering with Web Development.</p>
+    </footer>
+
+</body>
+</html>
