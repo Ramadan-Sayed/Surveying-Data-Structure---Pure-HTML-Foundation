@@ -1,0 +1,1 @@
+This is a structured HTML project designed to manage geospatial data. It showcases my ability to create clean, semantic code to handle engineering inputs like coordinates and survey points, bridging the gap between Civil Engineering (Surveying) and Web Development.
